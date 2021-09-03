@@ -9,7 +9,7 @@ document.getElementById('city-name').addEventListener('keypress', function (e) {
 const getData = () =>{
     const Api_key = `6b30faccf384ce1557aed56309d5b15e`;
     const cityName = document.getElementById('city-name').value;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${Api_key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${Api_key}`;
     fetch(url).then(res => res.json()).then(data => mainFunc(data));
 }
 
